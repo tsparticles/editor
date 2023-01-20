@@ -17,7 +17,7 @@ tsParticles
 or
 
 ```javascript
-tsParticles.loadJSON({
+tsParticles.load({
     id: "tsparticles",
     url: "particles.json"
 }).then((container) => {
