@@ -1,5 +1,5 @@
-import type { ILinks, ILinksShadow, ILinksTriangle } from "tsparticles-interaction-particles-links";
-import type { Container } from "tsparticles-engine";
+import type { ILinks, ILinksShadow, ILinksTriangle } from "@tsparticles/interaction-particles-links";
+import type { Container } from "@tsparticles/engine";
 import { EditorBase } from "../../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";

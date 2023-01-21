@@ -1,5 +1,5 @@
-import type { Container, IMove, IMoveTrail } from "tsparticles-engine";
-import { MoveDirection, OutMode } from "tsparticles-engine";
+import type { Container, IMove, IMoveTrail } from "@tsparticles/engine";
+import { MoveDirection, OutMode } from "@tsparticles/engine";
 import { EditorBase } from "../../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";

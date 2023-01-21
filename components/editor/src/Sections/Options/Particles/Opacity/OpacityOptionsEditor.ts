@@ -1,5 +1,5 @@
-import type { Container, IOpacity } from "tsparticles-engine";
-import { DestroyType, StartValueType } from "tsparticles-engine";
+import type { Container, IOpacity } from "@tsparticles/engine";
+import { DestroyType, StartValueType } from "@tsparticles/engine";
 import { EditorBase } from "../../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";

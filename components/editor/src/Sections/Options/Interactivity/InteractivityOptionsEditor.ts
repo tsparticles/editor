@@ -1,9 +1,9 @@
-import type { Container, IInteractivity } from "tsparticles-engine";
+import type { Container, IInteractivity } from "@tsparticles/engine";
 import { EditorBase } from "../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";
 import { EventsOptionsEditor } from "./Events/EventsOptionsEditor";
-import { InteractivityDetect } from "tsparticles-engine";
+import { InteractivityDetect } from "@tsparticles/engine";
 import { ModesOptionsEditor } from "./Modes/ModesOptionsEditor";
 
 export class InteractivityOptionsEditor extends EditorBase {

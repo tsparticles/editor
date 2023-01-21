@@ -1,8 +1,8 @@
-import type { Container } from "tsparticles-engine";
+import type { Container } from "@tsparticles/engine";
 import { EditorBase } from "../../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";
-import { RotateDirection } from "tsparticles-engine";
+import { RotateDirection } from "@tsparticles/engine";
 
 export class RotateOptionsEditor extends EditorBase {
     group!: EditorGroup;
