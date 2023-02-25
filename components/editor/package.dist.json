@@ -18,11 +18,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matteobruni/tsparticles.git",
-    "directory": "editor"
+    "url": "git+https://github.com/tsparticles/editor.git",
+    "directory": "components/editor"
   },
   "bugs": {
-    "url": "https://github.com/matteobruni/tsparticles/issues"
+    "url": "https://github.com/tsparticles/editor/issues"
   },
   "funding": [
     {

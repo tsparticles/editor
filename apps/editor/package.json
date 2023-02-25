@@ -8,7 +8,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/matteobruni/tsparticles.git"
+        "url": "git+https://github.com/tsparticles/editor.git"
     },
     "scripts": {
         "start": "pnpm run build && node ./app.js",
@@ -18,7 +18,7 @@
         "build:style": "stylus ./public/stylesheets/main.styl"
     },
     "bugs": {
-        "url": "https://github.com/matteobruni/tsparticles/issues"
+        "url": "https://github.com/tsparticles/editor/issues"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.48.2",
