@@ -68,7 +68,7 @@ importers:
       eslint-config-prettier: ^8.6.0
       object-gui: ^2.0.2
       prettier: ^2.8.3
-      rimraf: 4.2.0
+      rimraf: 4.3.0
       terser-webpack-plugin: ^5.3.6
       tsparticles-engine: ^2.9.3
       tsparticles-interaction-external-attract: ^2.9.3
@@ -123,7 +123,7 @@ importers:
       eslint: 8.34.0
       eslint-config-prettier: 8.6.0_eslint@8.34.0
       prettier: 2.8.4
-      rimraf: 4.2.0
+      rimraf: 4.3.0
       terser-webpack-plugin: 5.3.6_webpack@5.75.0
       typescript: 4.9.4
       webpack: 5.75.0_webpack-cli@5.0.1
@@ -2667,7 +2667,7 @@ packages:
       fs-extra: 11.1.0
       klaw: 4.1.0
       prettier: 2.8.4
-      rimraf: 4.2.0
+      rimraf: 4.3.0
       typescript: 4.9.4
       webpack: 5.75.0_webpack-cli@5.0.1
       webpack-tsparticles-plugin: 1.8.1
@@ -7125,8 +7125,8 @@ packages:
     dependencies:
       glob: 7.2.3
 
-  /rimraf/4.2.0:
-    resolution: {integrity: sha512-tPt+gLORNVqRCk0NwuJ5SlMEcOGvt4CCU8sUPqgCFtCbnoNCTd9Q6vq7JlBbxQlACiH14OR28y7piA2Bak9Sxw==}
+  /rimraf/4.3.0:
+    resolution: {integrity: sha512-5qVDXPbByA1qSJEWMv1qAwKsoS22vVpsL2QyxCKBw4gf6XiFo1K3uRLY6uSOOBFDwnqAZtnbILqWKKlzh8bkGg==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
@@ -8342,7 +8342,7 @@ packages:
       eslint: 8.34.0
       eslint-config-prettier: 8.6.0_eslint@8.34.0
       prettier: 2.8.4
-      rimraf: 4.2.0
+      rimraf: 4.3.0
       terser-webpack-plugin: 5.3.6_webpack@5.75.0
       typescript: 4.9.4
       webpack: 5.75.0_webpack-cli@5.0.1
