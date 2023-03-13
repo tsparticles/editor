@@ -1,5 +1,4 @@
-import type { Container, IModes } from "tsparticles-engine";
-import { EasingType } from "tsparticles-engine";
+import { type Container, EasingType, type IModes } from "tsparticles-engine";
 import { EditorBase } from "../../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";

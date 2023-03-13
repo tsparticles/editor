@@ -1,4 +1,4 @@
-import type { Container, IOptions } from "tsparticles-engine";
+import { type Container, type IOptions, tsParticles } from "tsparticles-engine";
 import type { Editor, EditorGroup } from "object-gui";
 import { BackgroundMaskOptionsEditor } from "./BackgroundMask/BackgroundMaskOptionsEditor";
 import { BackgroundOptionsEditor } from "./Background/BackgroundOptionsEditor";
@@ -10,7 +10,6 @@ import { InteractivityOptionsEditor } from "./Interactivity/InteractivityOptions
 import { MotionOptionsEditor } from "./Motion/MotionOptionsEditor";
 import { ParticlesOptionsEditor } from "./Particles/ParticlesOptionsEditor";
 import { editorChangedEvent } from "../../Utils";
-import { tsParticles } from "tsparticles-engine";
 
 export class OptionsEditor extends EditorBase {
     group!: EditorGroup;

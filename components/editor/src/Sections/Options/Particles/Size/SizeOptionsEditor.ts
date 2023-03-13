@@ -1,5 +1,4 @@
-import type { Container, ISize } from "tsparticles-engine";
-import { DestroyType, StartValueType } from "tsparticles-engine";
+import { type Container, DestroyType, type ISize, StartValueType } from "tsparticles-engine";
 import { EditorBase } from "../../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";

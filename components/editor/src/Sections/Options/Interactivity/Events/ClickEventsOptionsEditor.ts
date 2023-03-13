@@ -1,5 +1,4 @@
-import type { Container, IClickEvent } from "tsparticles-engine";
-import { ClickMode } from "tsparticles-engine";
+import { ClickMode, type Container, type IClickEvent } from "tsparticles-engine";
 import { EditorBase } from "../../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";
