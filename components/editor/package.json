@@ -1,96 +1,100 @@
 {
-    "name": "tsparticles-editor",
-    "version": "2.9.3",
-    "description": "tsParticles Configuration Editor",
-    "keywords": [
-        "front-end",
-        "frontend",
-        "tsparticles",
-        "particles.js",
-        "particles",
-        "editor",
-        "dat.gui",
-        "javascript",
-        "wysiwyg",
-        "confetti",
-        "tsparticles-editor",
-        "fireworks"
-    ],
-    "author": "Matteo Bruni <matteo.bruni@me.com>",
-    "homepage": "https://particles.js.org",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/tsparticles/editor.git",
-        "directory": "components/editor"
+  "name": "tsparticles-editor",
+  "version": "2.9.3",
+  "description": "tsParticles Configuration Editor",
+  "keywords": [
+    "front-end",
+    "frontend",
+    "tsparticles",
+    "particles.js",
+    "particles",
+    "editor",
+    "dat.gui",
+    "javascript",
+    "wysiwyg",
+    "confetti",
+    "tsparticles-editor",
+    "fireworks"
+  ],
+  "author": "Matteo Bruni <matteo.bruni@me.com>",
+  "homepage": "https://particles.js.org",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsparticles/editor.git",
+    "directory": "components/editor"
+  },
+  "scripts": {
+    "build": "tsparticles-cli build",
+    "build:ci": "tsparticles-cli build --ci",
+    "version": "tsparticles-cli build -d && git add package.dist.json",
+    "prepack": "pnpm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/tsparticles/editor/issues"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/matteobruni"
     },
-    "scripts": {
-        "build": "tsparticles-cli build",
-        "build:ci": "tsparticles-cli build --ci",
-        "version": "tsparticles-cli build -d && git add package.dist.json",
-        "prepack": "pnpm run build"
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/tsparticles"
     },
-    "bugs": {
-        "url": "https://github.com/tsparticles/editor/issues"
-    },
-    "funding": [
-        {
-            "type": "github",
-            "url": "https://github.com/sponsors/matteobruni"
-        },
-        {
-            "type": "buymeacoffee",
-            "url": "https://www.buymeacoffee.com/matteobruni"
-        }
-    ],
-    "main": "dist/cjs/index.js",
-    "module": "dist/esm/index.js",
-    "types": "dist/types/index.d.ts",
-    "prettier": "@tsparticles/prettier-config",
-    "devDependencies": {
-        "@babel/core": "^7.21.4",
-        "@tsparticles/cli": "^1.1.0",
-        "@tsparticles/eslint-config": "^1.10.0",
-        "@tsparticles/prettier-config": "^1.8.0",
-        "@tsparticles/tsconfig": "^1.11.0",
-        "@tsparticles/webpack-plugin": "^1.12.0",
-        "@types/node": "^18.15.11",
-        "@types/webpack-env": "^1.18.0",
-        "@typescript-eslint/eslint-plugin": "^5.58.0",
-        "@typescript-eslint/parser": "^5.58.0",
-        "babel-loader": "^9.1.2",
-        "browserslist": "^4.21.5",
-        "copyfiles": "^2.4.1",
-        "eslint": "^8.38.0",
-        "eslint-config-prettier": "^8.8.0",
-        "prettier": "^2.8.7",
-        "rimraf": "5.0.1",
-        "terser-webpack-plugin": "^5.3.7",
-        "typescript": "^5.0.4",
-        "webpack": "^5.79.0",
-        "webpack-bundle-analyzer": "^4.8.0",
-        "webpack-cli": "^5.0.1"
-    },
-    "dependencies": {
-        "object-gui": "^2.0.2",
-        "tsparticles-engine": "^2.9.3",
-        "tsparticles-interaction-external-attract": "^2.9.3",
-        "tsparticles-interaction-external-bounce": "^2.9.3",
-        "tsparticles-interaction-external-bubble": "^2.9.3",
-        "tsparticles-interaction-external-connect": "^2.9.3",
-        "tsparticles-interaction-external-grab": "^2.9.3",
-        "tsparticles-interaction-external-pause": "^2.9.3",
-        "tsparticles-interaction-external-push": "^2.9.3",
-        "tsparticles-interaction-external-remove": "^2.9.3",
-        "tsparticles-interaction-external-repulse": "^2.9.3",
-        "tsparticles-interaction-light": "^2.9.3",
-        "tsparticles-interaction-particles-links": "^2.9.3",
-        "tsparticles-plugin-absorbers": "^2.9.3",
-        "tsparticles-plugin-emitters": "^2.9.3",
-        "tsparticles-plugin-infection": "^2.9.3"
-    },
-    "publishConfig": {
-        "directory": "dist",
-        "linkDirectory": true
+    {
+      "type": "buymeacoffee",
+      "url": "https://www.buymeacoffee.com/matteobruni"
     }
+  ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "prettier": "@tsparticles/prettier-config",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@tsparticles/cli": "^1.1.0",
+    "@tsparticles/eslint-config": "^1.10.0",
+    "@tsparticles/prettier-config": "^1.8.0",
+    "@tsparticles/tsconfig": "^1.11.0",
+    "@tsparticles/webpack-plugin": "^1.12.0",
+    "@types/node": "^18.15.11",
+    "@types/webpack-env": "^1.18.0",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "babel-loader": "^9.1.2",
+    "browserslist": "^4.21.5",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.7",
+    "rimraf": "5.0.1",
+    "terser-webpack-plugin": "^5.3.7",
+    "typescript": "^5.0.4",
+    "webpack": "^5.79.0",
+    "webpack-bundle-analyzer": "^4.8.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "object-gui": "^2.0.2",
+    "tsparticles-engine": "^2.9.3",
+    "tsparticles-interaction-external-attract": "^2.9.3",
+    "tsparticles-interaction-external-bounce": "^2.9.3",
+    "tsparticles-interaction-external-bubble": "^2.9.3",
+    "tsparticles-interaction-external-connect": "^2.9.3",
+    "tsparticles-interaction-external-grab": "^2.9.3",
+    "tsparticles-interaction-external-pause": "^2.9.3",
+    "tsparticles-interaction-external-push": "^2.9.3",
+    "tsparticles-interaction-external-remove": "^2.9.3",
+    "tsparticles-interaction-external-repulse": "^2.9.3",
+    "tsparticles-interaction-light": "^2.9.3",
+    "tsparticles-interaction-particles-links": "^2.9.3",
+    "tsparticles-plugin-absorbers": "^2.9.3",
+    "tsparticles-plugin-emitters": "^2.9.3",
+    "tsparticles-plugin-infection": "^2.9.3"
+  },
+  "publishConfig": {
+    "directory": "dist",
+    "linkDirectory": true
+  }
 }
