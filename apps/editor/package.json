@@ -21,21 +21,21 @@
         "url": "https://github.com/tsparticles/editor/issues"
     },
     "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^5.58.0",
-        "@typescript-eslint/parser": "^5.58.0",
-        "eslint": "^8.38.0",
+        "@typescript-eslint/eslint-plugin": "^5.59.8",
+        "@typescript-eslint/parser": "^5.59.8",
+        "eslint": "^8.42.0",
         "eslint-config-prettier": "^8.8.0",
         "express": "^4.18.2",
         "express-rate-limit": "^6.7.0",
         "helmet": "^7.0.0",
         "object-gui": "^2.0.2",
-        "prettier": "^2.8.7",
+        "prettier": "^2.8.8",
         "pug": "^3.0.2",
         "pug-cli": "1.0.0-alpha6",
         "stylus": "^0.59.0",
-        "tsparticles": "^2.9.3",
-        "tsparticles-editor": "^2.9.3",
-        "tsparticles-engine": "^2.9.3",
+        "tsparticles": "^2.10.0",
+        "tsparticles-editor": "workspace:^",
+        "tsparticles-engine": "^2.10.0",
         "typescript": "^5.1.3"
     }
 }
