@@ -88,7 +88,7 @@ export class InfectionOptionsEditor extends EditorBase {
                 this.addStage(
                     stagesGroup,
                     () => options.stages,
-                    () => i + 1
+                    () => i + 1,
                 );
             }
         }
@@ -97,7 +97,7 @@ export class InfectionOptionsEditor extends EditorBase {
             this.addStage(
                 stagesGroup,
                 () => this.options().stages,
-                () => this.options().stages.length
+                () => this.options().stages.length,
             );
 
             await this.particles().refresh();

@@ -33,12 +33,16 @@ export class ParticlesEditor extends Editor {
         this.addButton("refresh", "Refresh");
         this.addButton("start", "Start");
         this.addButton("stop", "Stop");
-        this.addButton("exportConfig", "Export", false).click(() => {
-            const json = this.particles.exportConfiguration();
-            const contentType = "application/json";
-            const blob = new Blob([json], { type: contentType });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement("a");
+        this.addButton("exportConfig", "Export", false).click(async () => {
+            const blob = await this.particles.export("json");
+
+            if (!blob) {
+                return;
+            }
+
+            const contentType = "application/json",
+                url = URL.createObjectURL(blob),
+                a = document.createElement("a");
 
             a.download = "particles.json";
             a.href = url;

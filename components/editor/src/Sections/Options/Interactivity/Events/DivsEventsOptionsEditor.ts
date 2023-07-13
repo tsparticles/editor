@@ -24,7 +24,7 @@ export class DivsEventsOptionsEditor extends EditorBase {
                     arr.length.toString(10),
                     `Div ${arr.length + 1}`,
                     true,
-                    this.options
+                    this.options,
                 );
 
                 this.addDiv(divGroup);
