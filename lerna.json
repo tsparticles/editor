@@ -4,7 +4,7 @@
     "apps/*",
     "components/*"
   ],
-  "version": "2.10.1",
+  "version": "2.11.0",
   "npmClient": "pnpm",
   "conventionalCommits": true,
   "command": {
