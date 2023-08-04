@@ -20,6 +20,7 @@ app.set('view engine', 'pug');
 app.use(stylus.middleware('./public'));
 app.use(express.static('./public'));
 app.use("/tsparticles", express.static("./node_modules/tsparticles"));
+app.use("/tsparticles-plugin-export-json", express.static("./node_modules/tsparticles-plugin-export-json"));
 app.use("/object-gui", express.static("./node_modules/object-gui/dist"));
 app.use("/tsparticles-editor", express.static("./node_modules/tsparticles-editor"));
 
