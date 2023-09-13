@@ -12,10 +12,8 @@
   },
   "scripts": {
     "start": "pnpm run build && node ./app.js",
-    "build": "pnpm run build:style && pnpm run build:index",
-    "build:ci": "pnpm run build:style && pnpm run build:index",
-    "build:index": "pug ./views/index.pug",
-    "build:style": "stylus ./public/stylesheets/main.styl"
+    "build": "echo \"no-op\"",
+    "build:ci": "echo \"no-op\""
   },
   "bugs": {
     "url": "https://github.com/tsparticles/editor/issues"

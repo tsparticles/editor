@@ -1,0 +1,4 @@
+views/*.html
+views/**/*.html
+public/stylesheets/*.css
+public/stylesheets/**/*.css
