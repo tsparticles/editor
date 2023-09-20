@@ -19,15 +19,16 @@
     "url": "https://github.com/tsparticles/editor/issues"
   },
   "devDependencies": {
+    "@tsparticles/configs": "^3.0.0-beta.2",
+    "@tsparticles/editor": "workspace:^",
+    "@tsparticles/engine": "^3.0.0-beta.2",
+    "@tsparticles/plugin-export-json": "^3.0.0-beta.2",
     "express": "^4.18.2",
-    "express-rate-limit": "^7.0.0",
+    "express-rate-limit": "^7.0.1",
     "helmet": "^7.0.0",
     "object-gui": "^2.0.2",
     "pug": "^3.0.2",
     "stylus": "^0.60.0",
-    "tsparticles": "^2.12.0",
-    "tsparticles-editor": "workspace:^",
-    "tsparticles-engine": "^2.12.0",
-    "tsparticles-plugin-export-json": "^2.12.0"
+    "tsparticles": "^3.0.0-beta.2"
   }
 }

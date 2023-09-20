@@ -1,10 +1,10 @@
-import { type Container, EasingType, type IModes } from "tsparticles-engine";
+import { type Container, EasingType, type IModes } from "@tsparticles/engine";
 import { EditorBase } from "../../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";
-import type { IBubble } from "tsparticles-interaction-external-bubble";
-import type { IGrab } from "tsparticles-interaction-external-grab";
-import type { ILight } from "tsparticles-interaction-light";
+import type { IBubble } from "@tsparticles/interaction-external-bubble";
+import type { IGrab } from "@tsparticles/interaction-external-grab";
+import type { ILight } from "@tsparticles/interaction-light";
 import { ParticlesOptionsEditor } from "../../Particles/ParticlesOptionsEditor";
 
 export class ModesOptionsEditor extends EditorBase {

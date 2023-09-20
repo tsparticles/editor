@@ -1,4 +1,4 @@
-import { type Container, type IMove, type IMoveTrail, MoveDirection, OutMode } from "tsparticles-engine";
+import { type Container, type IMove, type IMoveTrail, MoveDirection, OutMode } from "@tsparticles/engine";
 import { EditorBase } from "../../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";
@@ -246,29 +246,31 @@ export class MoveOptionsEditor extends EditorBase {
         const group = this.group.addGroup("trail", "Trail");
         const optionsFunc = group.data as () => IMoveTrail;
         const options = optionsFunc();
-        const color = typeof options.fillColor === "string" ? options.fillColor : options.fillColor?.value;
+        const color = typeof options.fill?.color === "string" ? options.fill.color : options.fill?.color?.value;
 
-        group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
-        });
+        const fillGroup = group.addGroup("fill", "Fill");
 
-        group.addProperty("fillColor", "Fill Color", EditorType.color, color, false).change(async (value: unknown) => {
+        fillGroup.addProperty("color", "Color", EditorType.color, color, false).change(async (value: unknown) => {
             const options = optionsFunc();
 
             if (typeof value === "string") {
-                if (typeof options.fillColor === "string") {
-                    options.fillColor = value;
+                if (typeof options.fill.color === "string") {
+                    options.fill.color = value;
                 } else {
-                    if (options.fillColor === undefined) {
-                        options.fillColor = {
+                    if (options.fill.color === undefined) {
+                        options.fill.color = {
                             value: value,
                         };
                     } else {
-                        options.fillColor.value = value;
+                        options.fill.color.value = value;
                     }
                 }
             }
 
+            await this.particles().refresh();
+        });
+
+        group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
             await this.particles().refresh();
         });
 

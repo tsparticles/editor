@@ -1,4 +1,4 @@
-import { type Container, tsParticles } from "tsparticles-engine";
+import { type Container, tsParticles } from "@tsparticles/engine";
 import type { EditorGroup } from "object-gui";
 import { editorChangedEvent } from "./Utils";
 

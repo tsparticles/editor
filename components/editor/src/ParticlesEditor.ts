@@ -1,5 +1,5 @@
+import { type Container, tsParticles } from "@tsparticles/engine";
 import { Editor, EditorType } from "object-gui";
-import type { Container } from "tsparticles-engine";
 import type { EditorInputBase } from "object-gui/dist/js/Editors/EditorInputBase";
 import { OptionsEditor } from "./Sections/Options/OptionsEditor";
 
@@ -23,6 +23,10 @@ export class ParticlesEditor extends Editor {
 
         this.addOptions();
         this.addButtons();
+
+        if (Object.keys(tsParticles.configs).length) {
+            this.addConfigs();
+        }
 
         this.addPresets();
     }
@@ -67,6 +71,30 @@ export class ParticlesEditor extends Editor {
 
             a.dispatchEvent(evt);
         });
+    }
+
+    private addConfigs(): void {
+        const configsEditor = this.addProperty("configs", "Configs", EditorType.select, "", false);
+
+        configsEditor.change(async (value) => {
+            try {
+                const config = tsParticles.configs[value as string];
+
+                await this.particles.reset();
+
+                this.particles.options.load(config);
+
+                await this.particles.refresh();
+            } catch {
+                // ignore
+            }
+        });
+
+        configsEditor.addItems(
+            [{ value: "" }, ...Object.keys(tsParticles.configs).map((t) => ({ value: t }))].sort((a, b) =>
+                a.value.localeCompare(b.value),
+            ),
+        );
     }
 
     private addOptions(): void {
