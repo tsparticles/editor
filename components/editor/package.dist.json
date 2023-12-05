@@ -61,5 +61,8 @@
   "jsdelivr": "tsparticles.editor.min.js",
   "unpkg": "tsparticles.editor.min.js",
   "module": "esm/index.js",
-  "types": "types/index.d.ts"
+  "types": "types/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
 }
