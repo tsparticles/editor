@@ -1,77 +1,77 @@
 {
-  "name": "@tsparticles/editor",
-  "version": "2.12.0",
-  "description": "tsParticles Configuration Editor",
-  "keywords": [
-    "front-end",
-    "frontend",
-    "tsparticles",
-    "particles.js",
-    "particles",
-    "editor",
-    "dat.gui",
-    "javascript",
-    "wysiwyg",
-    "confetti",
-    "tsparticles-editor",
-    "fireworks"
-  ],
-  "author": "Matteo Bruni <matteo.bruni@me.com>",
-  "homepage": "https://particles.js.org",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tsparticles/editor.git",
-    "directory": "components/editor"
-  },
-  "scripts": {
-    "build": "tsparticles-cli build",
-    "build:ci": "tsparticles-cli build --ci",
-    "version": "tsparticles-cli build -d && git add package.dist.json",
-    "prepack": "pnpm run build"
-  },
-  "bugs": {
-    "url": "https://github.com/tsparticles/editor/issues"
-  },
-  "funding": [
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/matteobruni"
+    "name": "@tsparticles/editor",
+    "version": "3.0.0",
+    "description": "tsParticles Configuration Editor",
+    "keywords": [
+        "front-end",
+        "frontend",
+        "tsparticles",
+        "particles.js",
+        "particles",
+        "editor",
+        "dat.gui",
+        "javascript",
+        "wysiwyg",
+        "confetti",
+        "tsparticles-editor",
+        "fireworks"
+    ],
+    "author": "Matteo Bruni <matteo.bruni@me.com>",
+    "homepage": "https://particles.js.org",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tsparticles/editor.git",
+        "directory": "components/editor"
     },
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/tsparticles"
+    "scripts": {
+        "build": "tsparticles-cli build",
+        "build:ci": "tsparticles-cli build --ci",
+        "version": "tsparticles-cli build -d && git add package.dist.json",
+        "prepack": "pnpm run build"
     },
-    {
-      "type": "buymeacoffee",
-      "url": "https://www.buymeacoffee.com/matteobruni"
+    "bugs": {
+        "url": "https://github.com/tsparticles/editor/issues"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/matteobruni"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/tsparticles"
+        },
+        {
+            "type": "buymeacoffee",
+            "url": "https://www.buymeacoffee.com/matteobruni"
+        }
+    ],
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/types/index.d.ts",
+    "prettier": "@tsparticles/prettier-config",
+    "dependencies": {
+        "@tsparticles/engine": "^3.0.0",
+        "@tsparticles/interaction-external-attract": "^3.0.0",
+        "@tsparticles/interaction-external-bounce": "^3.0.0",
+        "@tsparticles/interaction-external-bubble": "^3.0.0",
+        "@tsparticles/interaction-external-connect": "^3.0.0",
+        "@tsparticles/interaction-external-grab": "^3.0.0",
+        "@tsparticles/interaction-external-pause": "^3.0.0",
+        "@tsparticles/interaction-external-push": "^3.0.0",
+        "@tsparticles/interaction-external-remove": "^3.0.0",
+        "@tsparticles/interaction-external-repulse": "^3.0.0",
+        "@tsparticles/interaction-light": "^3.0.0",
+        "@tsparticles/interaction-particles-links": "^3.0.0",
+        "@tsparticles/plugin-absorbers": "^3.0.0",
+        "@tsparticles/plugin-emitters": "^3.0.0",
+        "@tsparticles/plugin-export-json": "^3.0.0",
+        "@tsparticles/plugin-infection": "^3.0.0",
+        "object-gui": "^2.0.2"
+    },
+    "publishConfig": {
+        "directory": "dist",
+        "linkDirectory": true
     }
-  ],
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
-  "prettier": "@tsparticles/prettier-config",
-  "dependencies": {
-    "object-gui": "^2.0.2",
-    "@tsparticles/engine": "^3.0.0",
-    "@tsparticles/interaction-external-attract": "^3.0.0",
-    "@tsparticles/interaction-external-bounce": "^3.0.0",
-    "@tsparticles/interaction-external-bubble": "^3.0.0",
-    "@tsparticles/interaction-external-connect": "^3.0.0",
-    "@tsparticles/interaction-external-grab": "^3.0.0",
-    "@tsparticles/interaction-external-pause": "^3.0.0",
-    "@tsparticles/interaction-external-push": "^3.0.0",
-    "@tsparticles/interaction-external-remove": "^3.0.0",
-    "@tsparticles/interaction-external-repulse": "^3.0.0",
-    "@tsparticles/interaction-light": "^3.0.0",
-    "@tsparticles/interaction-particles-links": "^3.0.0",
-    "@tsparticles/plugin-absorbers": "^3.0.0",
-    "@tsparticles/plugin-emitters": "^3.0.0",
-    "@tsparticles/plugin-export-json": "^3.0.0",
-    "@tsparticles/plugin-infection": "^3.0.0"
-  },
-  "publishConfig": {
-    "directory": "dist",
-    "linkDirectory": true
-  }
 }

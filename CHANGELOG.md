@@ -3,29 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/tsparticles/editor/compare/v2.12.0...v3.0.0) (2023-12-05)
+
+### Bug Fixes
+
+- **deps:** update dependency eslint-config-prettier to v9 ([7d13042](https://github.com/tsparticles/editor/commit/7d130427b6e668317b7609e863084fbdf9da1bf6))
+
+### Features
+
+- preparing migration to v3 ([2a5f8ad](https://github.com/tsparticles/editor/commit/2a5f8ad6c1c73054564313d7ebef613b91662c09))
+
 # [2.12.0](https://github.com/tsparticles/editor/compare/v2.11.0...v2.12.0) (2023-08-04)
 
 **Note:** Version bump only for package tsparticles-editor-workspace
-
-
-
-
 
 # [2.11.0](https://github.com/tsparticles/editor/compare/v2.10.1...v2.11.0) (2023-07-13)
 
 **Note:** Version bump only for package tsparticles-editor-workspace
 
-
-
-
-
 ## [2.10.1](https://github.com/tsparticles/editor/compare/v2.10.0...v2.10.1) (2023-06-04)
 
 **Note:** Version bump only for package tsparticles-editor-workspace
-
-
-
-
 
 # 2.10.0 (2023-06-03)
 
