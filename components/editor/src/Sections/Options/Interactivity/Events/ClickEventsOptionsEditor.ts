@@ -1,4 +1,4 @@
-import { ClickMode, type Container, type IClickEvent } from "@tsparticles/engine";
+import { type Container, type IClickEvent } from "@tsparticles/engine";
 import { EditorBase } from "../../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";
@@ -32,25 +32,25 @@ export class ClickEventsOptionsEditor extends EditorBase {
             })
             .addItems([
                 {
-                    value: ClickMode.attract,
+                    value: "attract",
                 },
                 {
-                    value: ClickMode.bubble,
+                    value: "bubble",
                 },
                 {
-                    value: ClickMode.pause,
+                    value: "pause",
                 },
                 {
-                    value: ClickMode.push,
+                    value: "push",
                 },
                 {
-                    value: ClickMode.remove,
+                    value: "remove",
                 },
                 {
-                    value: ClickMode.repulse,
+                    value: "repulse",
                 },
                 {
-                    value: ClickMode.trail,
+                    value: "trail",
                 },
             ]);
 

@@ -1,4 +1,4 @@
-import { type Container, DivMode, DivType, type IDivEvent, type SingleOrMultiple } from "@tsparticles/engine";
+import { type Container, DivType, type IDivEvent, type SingleOrMultiple } from "@tsparticles/engine";
 import { EditorBase } from "../../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";
@@ -73,13 +73,13 @@ export class DivsEventsOptionsEditor extends EditorBase {
             })
             .addItems([
                 {
-                    value: DivMode.bounce,
+                    value: "bounce",
                 },
                 {
-                    value: DivMode.bubble,
+                    value: "bubble",
                 },
                 {
-                    value: DivMode.repulse,
+                    value: "repulse",
                 },
             ]);
 

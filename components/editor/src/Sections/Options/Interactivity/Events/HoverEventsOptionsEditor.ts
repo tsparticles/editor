@@ -1,4 +1,4 @@
-import { type Container, HoverMode, type IHoverEvent } from "@tsparticles/engine";
+import { type Container, type IHoverEvent } from "@tsparticles/engine";
 import { EditorBase } from "../../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";
@@ -47,28 +47,28 @@ export class HoverEventsOptionsEditor extends EditorBase {
             })
             .addItems([
                 {
-                    value: HoverMode.attract,
+                    value: "attract",
                 },
                 {
-                    value: HoverMode.bubble,
+                    value: "bubble",
                 },
                 {
-                    value: HoverMode.connect,
+                    value: "connect",
                 },
                 {
-                    value: HoverMode.grab,
+                    value: "grab",
                 },
                 {
-                    value: HoverMode.light,
+                    value: "light",
                 },
                 {
-                    value: HoverMode.repulse,
+                    value: "repulse",
                 },
                 {
-                    value: HoverMode.slow,
+                    value: "slow",
                 },
                 {
-                    value: HoverMode.trail,
+                    value: "trail",
                 },
             ]);
     }

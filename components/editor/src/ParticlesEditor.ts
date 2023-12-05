@@ -4,10 +4,13 @@ import type { EditorInputBase } from "object-gui/dist/js/Editors/EditorInputBase
 import { OptionsEditor } from "./Sections/Options/OptionsEditor";
 
 export class ParticlesEditor extends Editor {
+    readonly particles;
     private _presets?: EditorInputBase;
 
-    constructor(readonly particles: Container) {
-        super(particles.id, "tsParticles", () => particles);
+    constructor(particles: Container) {
+        super(particles.id.toString(), "tsParticles", () => particles);
+
+        this.particles = particles;
     }
 
     addPreset(text: string, file: string): void {
