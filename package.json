@@ -8,8 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.22.17",
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
     "@tsparticles/cli": "^1.13.0",
     "@tsparticles/eslint-config": "^1.20.0",
     "@tsparticles/prettier-config": "^1.12.0",
