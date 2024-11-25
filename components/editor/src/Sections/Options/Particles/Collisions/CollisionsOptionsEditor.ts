@@ -1,12 +1,12 @@
 import { CollisionMode, type Container, type ICollisions } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class CollisionsOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => ICollisions;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -31,40 +31,40 @@ export class CollisionsOptionsEditor extends EditorBase {
         const group = parentGroup.addGroup(name, title);
         const randomGroup = group.addGroup("random", "Random");
 
-        randomGroup.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        randomGroup.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        randomGroup.addProperty("minimumValue", "Minimum Value", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        randomGroup.addProperty("minimumValue", "Minimum Value", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
 
-        group.addProperty("value", "Value", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("value", "Value", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
     }
 
     private addOverlap(): void {
         const group = this.group.addGroup("overlap", "Overlap");
 
-        group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        group.addProperty("retries", "Retries", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("retries", "Retries", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
     }
 
     private addProperties(): void {
-        this.group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
         this.group
             .addProperty("mode", "Mode", EditorType.select)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .addItems([
                 {

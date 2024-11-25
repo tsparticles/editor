@@ -4,14 +4,14 @@ import {
     type IBackgroundMaskCover,
     type IRangeValueColor,
 } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { EditorBase } from "../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class BackgroundMaskOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => IBackgroundMask;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -30,24 +30,24 @@ export class BackgroundMaskOptionsEditor extends EditorBase {
             colorValue = options().color,
             color = typeof colorValue === "string" ? colorValue : colorValue?.value;
 
-        coverGroup.addProperty("color", "Color", EditorType.color, color, false).change(async (value: unknown) => {
+        coverGroup.addProperty("color", "Color", EditorType.color, color, false).change((value: unknown) => {
             if (typeof value === "string") {
                 options().color = value;
             } else {
                 options().color = { value: value as IRangeValueColor };
             }
 
-            await this.particles().refresh();
+            void this.particles().refresh();
         });
 
-        coverGroup.addProperty("image", "Image", EditorType.string).change(async () => {
-            await this.particles().refresh();
+        coverGroup.addProperty("image", "Image", EditorType.string).change(() => {
+            void this.particles().refresh();
         });
 
         coverGroup
             .addProperty("opacity", "Opacity", EditorType.number)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .step(0.01)
             .min(0)
@@ -57,8 +57,8 @@ export class BackgroundMaskOptionsEditor extends EditorBase {
     private addProperties(): void {
         this.group
             .addProperty("composite", "Composite", EditorType.select)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .addItems([
                 {
@@ -141,8 +141,8 @@ export class BackgroundMaskOptionsEditor extends EditorBase {
                 },
             ]);
 
-        this.group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
     }
 }

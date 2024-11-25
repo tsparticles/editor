@@ -1,12 +1,12 @@
 import type { Container, IParticlesBounce } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class BounceOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => IParticlesBounce;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -22,16 +22,16 @@ export class BounceOptionsEditor extends EditorBase {
         const group = this.group.addGroup(name, title),
             randomGroup = group.addGroup("random", "Random");
 
-        randomGroup.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        randomGroup.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        randomGroup.addProperty("minimumValue", "Minimum Value", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        randomGroup.addProperty("minimumValue", "Minimum Value", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
 
-        group.addProperty("value", "Value", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("value", "Value", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
     }
 

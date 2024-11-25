@@ -1,12 +1,12 @@
 import { type Container, DivType, type IDivEvent, type SingleOrMultiple } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class DivsEventsOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => SingleOrMultiple<IDivEvent>;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -18,7 +18,7 @@ export class DivsEventsOptionsEditor extends EditorBase {
         this.addDivs();
 
         if (this.options() instanceof Array) {
-            this.group.addButton("addDiv", "Add Div", false).click(async () => {
+            this.group.addButton("addDiv", "Add Div", false).click(() => {
                 const arr = this.options() as IDivEvent[];
                 const divGroup = this.group.addGroup(
                     arr.length.toString(10),
@@ -29,7 +29,7 @@ export class DivsEventsOptionsEditor extends EditorBase {
 
                 this.addDiv(divGroup);
 
-                await this.particles().refresh();
+                void this.particles().refresh();
             });
         }
     }
@@ -40,27 +40,27 @@ export class DivsEventsOptionsEditor extends EditorBase {
         if (options().selectors instanceof Array) {
             const selectorsGroup = group.addGroup("selectors", "Selectors");
 
-            selectorsGroup.addButton("addSelector", "Add Selector", false).click(async () => {
+            selectorsGroup.addButton("addSelector", "Add Selector", false).click(() => {
                 const arr = options().selectors as string[];
 
                 selectorsGroup
                     .addProperty(arr.length.toString(10), `Selector ${arr.length + 1}`, EditorType.string)
-                    .change(async () => {
-                        await this.particles().refresh();
+                    .change(() => {
+                        void this.particles().refresh();
                     });
 
-                await this.particles().refresh();
+                void this.particles().refresh();
             });
         } else {
-            group.addProperty("selectors", "Selectors", EditorType.string).change(async () => {
-                await this.particles().refresh();
+            group.addProperty("selectors", "Selectors", EditorType.string).change(() => {
+                void this.particles().refresh();
             });
         }
 
         group
             .addProperty("enable", "Enable", EditorType.boolean)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .step(0.01)
             .min(0)
@@ -68,8 +68,8 @@ export class DivsEventsOptionsEditor extends EditorBase {
 
         this.group
             .addProperty("mode", "Mode", EditorType.select)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .addItems([
                 {
@@ -85,8 +85,8 @@ export class DivsEventsOptionsEditor extends EditorBase {
 
         group
             .addProperty("type", "Type", EditorType.select)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .addItems([
                 {

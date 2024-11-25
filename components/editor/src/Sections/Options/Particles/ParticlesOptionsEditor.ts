@@ -1,11 +1,10 @@
 import type { Container, IParticlesOptions } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { BounceOptionsEditor } from "./Bounce/BounceOptionsEditor";
 import { CollisionsOptionsEditor } from "./Collisions/CollisionsOptionsEditor";
 import { ColorOptionsEditor } from "./Color/ColorOptionsEditor";
 import { DestroyOptionsEditor } from "./Destroy/DestroyOptionsEditor";
 import { EditorBase } from "../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 import { LifeOptionsEditor } from "./Life/LifeOptionsEditor";
 import { LinksOptionsEditor } from "./Links/LinksOptionsEditor";
 import { MoveOptionsEditor } from "./Move/MoveOptionsEditor";
@@ -25,6 +24,7 @@ export class ParticlesOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => IParticlesOptions;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -113,8 +113,8 @@ export class ParticlesOptionsEditor extends EditorBase {
     }
 
     private addProperties(): void {
-        this.group.addProperty("reduceDuplicates", "Reduce Duplicates", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("reduceDuplicates", "Reduce Duplicates", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
     }
 

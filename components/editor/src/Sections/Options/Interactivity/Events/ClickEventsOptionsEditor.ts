@@ -1,7 +1,6 @@
 import { type Container, type IClickEvent } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 import { loadAbsorbersPlugin } from "@tsparticles/plugin-absorbers";
 import { loadEmittersPlugin } from "@tsparticles/plugin-emitters";
 
@@ -9,6 +8,7 @@ export class ClickEventsOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => IClickEvent;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -21,14 +21,14 @@ export class ClickEventsOptionsEditor extends EditorBase {
     }
 
     private addProperties(): void {
-        this.group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
         const modeSelectInput = this.group
             .addProperty("mode", "Mode", EditorType.select)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .addItems([
                 {

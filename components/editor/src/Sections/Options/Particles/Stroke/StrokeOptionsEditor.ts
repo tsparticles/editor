@@ -1,13 +1,13 @@
 import type { Container, IStroke } from "@tsparticles/engine";
-import type { EditorGroup, SingleOrMultiple } from "object-gui";
+import { type EditorGroup, EditorType, type SingleOrMultiple } from "object-gui";
 import { ColorOptionsEditor } from "../Color/ColorOptionsEditor";
 import { EditorBase } from "../../../../EditorBase";
-import { EditorType } from "object-gui";
 
 export class StrokeOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => SingleOrMultiple<IStroke>;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -51,15 +51,15 @@ export class StrokeOptionsEditor extends EditorBase {
 
         group
             .addProperty("opacity", "Opacity", EditorType.number)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .step(0.01)
             .min(0)
             .max(1);
 
-        group.addProperty("width", "Width", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("width", "Width", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
     }
 }

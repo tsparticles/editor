@@ -1,12 +1,12 @@
+import { type EditorGroup, EditorType } from "object-gui";
 import type { Container } from "@tsparticles/engine";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class DestroyOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => unknown;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -24,8 +24,8 @@ export class DestroyOptionsEditor extends EditorBase {
 
         group
             .addProperty("mode", "Mode", EditorType.select)
-            .change(async () => {
-                this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .addItems([
                 {
@@ -44,36 +44,36 @@ export class DestroyOptionsEditor extends EditorBase {
 
         const randomFactorGroup = factorGroup.addGroup("random", "Random");
 
-        randomFactorGroup.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        randomFactorGroup.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        randomFactorGroup.addProperty("minimumValue", "Minimum Value", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        randomFactorGroup.addProperty("minimumValue", "Minimum Value", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
 
-        factorGroup.addProperty("value", "Value", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        factorGroup.addProperty("value", "Value", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
 
         const rateGroup = group.addGroup("rate", "Rate");
 
         const randomRateGroup = rateGroup.addGroup("random", "Random");
 
-        randomRateGroup.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        randomRateGroup.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        randomRateGroup.addProperty("minimumValue", "Minimum Value", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        randomRateGroup.addProperty("minimumValue", "Minimum Value", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
 
-        rateGroup.addProperty("value", "Value", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        rateGroup.addProperty("value", "Value", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
 
-        group.addProperty("count", "Count", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("count", "Count", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
     }
 }

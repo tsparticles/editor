@@ -1,12 +1,12 @@
 import type { Container, IFullScreen } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { EditorBase } from "../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class FullScreenOptionsEditor extends EditorBase {
     private group!: EditorGroup;
     private options!: () => IFullScreen;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -19,12 +19,12 @@ export class FullScreenOptionsEditor extends EditorBase {
     }
 
     private addProperties(): void {
-        this.group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        this.group.addProperty("zIndex", "zIndex", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("zIndex", "zIndex", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
     }
 }
