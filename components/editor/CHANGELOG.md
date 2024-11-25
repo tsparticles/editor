@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/tsparticles/editor/compare/v3.0.0...v3.1.0) (2024-11-25)
+
+### Bug Fixes
+
+-   fixed issue with newer tsParticles versions ([fd97209](https://github.com/tsparticles/editor/commit/fd97209339afb6a14c0aa30b47605cf94ec4d461))
+
 # [3.0.0](https://github.com/tsparticles/editor/compare/v2.12.0...v3.0.0) (2023-12-05)
 
 ### Features
