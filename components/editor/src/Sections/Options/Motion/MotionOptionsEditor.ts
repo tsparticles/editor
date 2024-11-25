@@ -1,12 +1,12 @@
-import type { Container } from "tsparticles-engine";
+import { type EditorGroup, EditorType } from "object-gui";
+import type { Container } from "@tsparticles/engine";
 import { EditorBase } from "../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class MotionOptionsEditor extends EditorBase {
     private group!: EditorGroup;
     private options!: () => unknown;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -20,8 +20,8 @@ export class MotionOptionsEditor extends EditorBase {
     }
 
     private addProperties(): void {
-        this.group.addProperty("disable", "Disable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("disable", "Disable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
     }
 
@@ -30,13 +30,13 @@ export class MotionOptionsEditor extends EditorBase {
 
         coverGroup
             .addProperty("factor", "Factor", EditorType.number)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .step(1);
 
-        coverGroup.addProperty("value", "Value", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        coverGroup.addProperty("value", "Value", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
     }
 }

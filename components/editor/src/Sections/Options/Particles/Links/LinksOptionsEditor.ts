@@ -1,13 +1,13 @@
-import type { ILinks, ILinksShadow, ILinksTriangle } from "tsparticles-interaction-particles-links";
-import type { Container } from "tsparticles-engine";
+import { type EditorGroup, EditorType } from "object-gui";
+import type { ILinks, ILinksShadow, ILinksTriangle } from "@tsparticles/interaction-particles-links";
+import type { Container } from "@tsparticles/engine";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class LinksOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => ILinks;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -26,11 +26,11 @@ export class LinksOptionsEditor extends EditorBase {
         const options = optionsFunc();
         const color = typeof options.color === "string" ? options.color : options.color?.value;
 
-        this.group.addProperty("blink", "Blink", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("blink", "Blink", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        this.group.addProperty("color", "Color", EditorType.color, color, false).change(async (value: unknown) => {
+        this.group.addProperty("color", "Color", EditorType.color, color, false).change((value: unknown) => {
             const options = optionsFunc();
 
             if (typeof value === "string") {
@@ -40,20 +40,20 @@ export class LinksOptionsEditor extends EditorBase {
                     options.color.value = value;
                 }
 
-                await this.particles().refresh();
+                void this.particles().refresh();
             }
         });
 
-        this.group.addProperty("consent", "Consent", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("consent", "Consent", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        this.group.addProperty("distance", "Distance", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("distance", "Distance", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
 
-        this.group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
         this.group
@@ -61,29 +61,29 @@ export class LinksOptionsEditor extends EditorBase {
             .min(0)
             .max(1)
             .step(0.01)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             });
 
-        this.group.addProperty("id", "Id", EditorType.string).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("id", "Id", EditorType.string).change(() => {
+            void this.particles().refresh();
         });
 
         this.group
             .addProperty("opacity", "Opacity", EditorType.number)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .step(0.01)
             .min(0)
             .max(1);
 
-        this.group.addProperty("warp", "Warp", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("warp", "Warp", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        this.group.addProperty("width", "Width", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("width", "Width", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
     }
 
@@ -93,11 +93,11 @@ export class LinksOptionsEditor extends EditorBase {
         const options = optionsFunc();
         const color = typeof options.color === "string" ? options.color : options.color?.value;
 
-        group.addProperty("blur", "Blur", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("blur", "Blur", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        group.addProperty("color", "Color", EditorType.color, color, false).change(async (value: unknown) => {
+        group.addProperty("color", "Color", EditorType.color, color, false).change((value: unknown) => {
             const options = optionsFunc();
 
             if (typeof value === "string") {
@@ -114,11 +114,11 @@ export class LinksOptionsEditor extends EditorBase {
                 }
             }
 
-            await this.particles().refresh();
+            void this.particles().refresh();
         });
 
-        group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
     }
 
@@ -128,7 +128,7 @@ export class LinksOptionsEditor extends EditorBase {
         const options = optionsFunc();
         const color = typeof options?.color === "string" ? options.color : options?.color?.value;
 
-        group.addProperty("color", "Color", EditorType.color, color, false).change(async (value: unknown) => {
+        group.addProperty("color", "Color", EditorType.color, color, false).change((value: unknown) => {
             const options = optionsFunc();
 
             if (typeof value === "string") {
@@ -145,11 +145,11 @@ export class LinksOptionsEditor extends EditorBase {
                 }
             }
 
-            await this.particles().refresh();
+            void this.particles().refresh();
         });
 
-        group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
         group
@@ -157,14 +157,14 @@ export class LinksOptionsEditor extends EditorBase {
             .min(0)
             .max(1)
             .step(0.01)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             });
 
         group
             .addProperty("opacity", "Opacity", EditorType.number)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .step(0.01)
             .min(0)

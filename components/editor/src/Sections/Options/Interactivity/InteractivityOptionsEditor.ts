@@ -1,7 +1,6 @@
-import { type Container, type IInteractivity, InteractivityDetect } from "tsparticles-engine";
+import { type Container, type IInteractivity, InteractivityDetect } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { EditorBase } from "../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 import { EventsOptionsEditor } from "./Events/EventsOptionsEditor";
 import { ModesOptionsEditor } from "./Modes/ModesOptionsEditor";
 
@@ -9,6 +8,7 @@ export class InteractivityOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => IInteractivity;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -38,8 +38,8 @@ export class InteractivityOptionsEditor extends EditorBase {
     private addProperties(): void {
         this.group
             .addProperty("detectsOn", "Detects On", EditorType.select)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .addItems([
                 {

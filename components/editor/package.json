@@ -1,6 +1,6 @@
 {
-  "name": "tsparticles-editor",
-  "version": "2.12.0",
+  "name": "@tsparticles/editor",
+  "version": "3.1.0",
   "description": "tsParticles Configuration Editor",
   "keywords": [
     "front-end",
@@ -52,26 +52,28 @@
   "types": "dist/types/index.d.ts",
   "prettier": "@tsparticles/prettier-config",
   "dependencies": {
-    "object-gui": "^2.0.2",
-    "tsparticles-engine": "^2.12.0",
-    "tsparticles-interaction-external-attract": "^2.12.0",
-    "tsparticles-interaction-external-bounce": "^2.12.0",
-    "tsparticles-interaction-external-bubble": "^2.12.0",
-    "tsparticles-interaction-external-connect": "^2.12.0",
-    "tsparticles-interaction-external-grab": "^2.12.0",
-    "tsparticles-interaction-external-pause": "^2.12.0",
-    "tsparticles-interaction-external-push": "^2.12.0",
-    "tsparticles-interaction-external-remove": "^2.12.0",
-    "tsparticles-interaction-external-repulse": "^2.12.0",
-    "tsparticles-interaction-light": "^2.12.0",
-    "tsparticles-interaction-particles-links": "^2.12.0",
-    "tsparticles-plugin-absorbers": "^2.12.0",
-    "tsparticles-plugin-emitters": "^2.12.0",
-    "tsparticles-plugin-export-json": "^2.12.0",
-    "tsparticles-plugin-infection": "^2.12.0"
+    "@tsparticles/engine": "^3.7.1",
+    "@tsparticles/interaction-external-attract": "^3.7.1",
+    "@tsparticles/interaction-external-bounce": "^3.7.1",
+    "@tsparticles/interaction-external-bubble": "^3.7.1",
+    "@tsparticles/interaction-external-connect": "^3.7.1",
+    "@tsparticles/interaction-external-grab": "^3.7.1",
+    "@tsparticles/interaction-external-pause": "^3.7.1",
+    "@tsparticles/interaction-external-push": "^3.7.1",
+    "@tsparticles/interaction-external-remove": "^3.7.1",
+    "@tsparticles/interaction-external-repulse": "^3.7.1",
+    "@tsparticles/interaction-light": "^3.7.1",
+    "@tsparticles/interaction-particles-links": "^3.7.1",
+    "@tsparticles/plugin-absorbers": "^3.7.1",
+    "@tsparticles/plugin-emitters": "^3.7.1",
+    "@tsparticles/plugin-export-json": "^3.7.1",
+    "@tsparticles/plugin-infection": "^3.7.1",
+    "object-gui": "^2.0.2"
   },
   "publishConfig": {
     "directory": "dist",
-    "linkDirectory": true
-  }
+    "linkDirectory": true,
+    "access": "public"
+  },
+  "gitHead": "301004f5f216944a67e19e42b743709c00d3ea24"
 }

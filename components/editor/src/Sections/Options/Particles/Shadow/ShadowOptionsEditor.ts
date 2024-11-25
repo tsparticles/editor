@@ -1,12 +1,12 @@
-import type { Container, IShadow } from "tsparticles-engine";
+import type { Container, IShadow } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class ShadowOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => IShadow;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -22,12 +22,12 @@ export class ShadowOptionsEditor extends EditorBase {
     private addOffset(): void {
         const group = this.group.addGroup("offset", "Offset");
 
-        group.addProperty("x", "X", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("x", "X", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
 
-        group.addProperty("y", "Y", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("y", "Y", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
     }
 
@@ -36,11 +36,11 @@ export class ShadowOptionsEditor extends EditorBase {
         const options = optionsFunc();
         const color = typeof options.color === "string" ? options.color : options.color?.value;
 
-        this.group.addProperty("blur", "Blur", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("blur", "Blur", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
 
-        this.group.addProperty("color", "Color", EditorType.color, color, false).change(async (value: unknown) => {
+        this.group.addProperty("color", "Color", EditorType.color, color, false).change((value: unknown) => {
             if (typeof value === "string") {
                 if (typeof options.color === "string") {
                     options.color = value;
@@ -49,11 +49,11 @@ export class ShadowOptionsEditor extends EditorBase {
                 }
             }
 
-            await this.particles().refresh();
+            void this.particles().refresh();
         });
 
-        this.group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
     }
 }

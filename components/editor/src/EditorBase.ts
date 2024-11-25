@@ -1,9 +1,13 @@
-import { type Container, tsParticles } from "tsparticles-engine";
+import { type Container, tsParticles } from "@tsparticles/engine";
 import type { EditorGroup } from "object-gui";
 import { editorChangedEvent } from "./Utils";
 
 export abstract class EditorBase {
-    protected constructor(protected readonly particles: () => Container) {}
+    protected readonly particles;
+
+    protected constructor(particles: () => Container) {
+        this.particles = particles;
+    }
 
     notifyEditorChanged(): void {
         tsParticles.dispatchEvent(editorChangedEvent, {

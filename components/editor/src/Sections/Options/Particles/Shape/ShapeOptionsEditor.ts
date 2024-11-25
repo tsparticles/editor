@@ -1,12 +1,12 @@
-import type { Container, IShape } from "tsparticles-engine";
+import type { Container, IShape } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class ShapeOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => IShape;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -19,11 +19,11 @@ export class ShapeOptionsEditor extends EditorBase {
     }
 
     private addProperties(): void {
-        const selectType = this.group.addProperty("type", "Type", EditorType.select).change(async () => {
-            await this.particles().refresh();
+        const selectType = this.group.addProperty("type", "Type", EditorType.select).change(() => {
+            void this.particles().refresh();
         });
 
-        for (const key of this.particles().drawers.keys()) {
+        for (const key of this.particles().shapeDrawers.keys()) {
             selectType.addItem(key);
         }
     }

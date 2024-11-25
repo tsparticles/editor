@@ -1,12 +1,12 @@
-import { type Container, DestroyType, type IOpacity, StartValueType } from "tsparticles-engine";
+import { type Container, DestroyType, type IOpacity, StartValueType } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class OpacityOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => IOpacity;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -25,8 +25,8 @@ export class OpacityOptionsEditor extends EditorBase {
 
         group
             .addProperty("destroy", "Destroy", EditorType.select)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .addItems([
                 {
@@ -40,14 +40,14 @@ export class OpacityOptionsEditor extends EditorBase {
                 },
             ]);
 
-        group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
         group
             .addProperty("minimumValue", "Minimum Value", EditorType.number)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .min(0)
             .max(0)
@@ -55,15 +55,15 @@ export class OpacityOptionsEditor extends EditorBase {
 
         group
             .addProperty("speed", "Speed", EditorType.number)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .step(0.01);
 
         group
             .addProperty("startValue", "Start Value", EditorType.select)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .addItems([
                 {
@@ -77,16 +77,16 @@ export class OpacityOptionsEditor extends EditorBase {
                 },
             ]);
 
-        group.addProperty("sync", "Sync", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("sync", "Sync", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
     }
 
     private addProperties(): void {
         this.group
             .addProperty("value", "Value", EditorType.number)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .min(0)
             .max(1)
@@ -96,12 +96,12 @@ export class OpacityOptionsEditor extends EditorBase {
     private addRandom(): void {
         const group = this.group.addGroup("random", "Random");
 
-        group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        group.addProperty("minimumValue", "Minimum Value", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("minimumValue", "Minimum Value", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
     }
 }

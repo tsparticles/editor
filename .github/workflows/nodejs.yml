@@ -10,12 +10,11 @@ on:
       - legacy
 
 #env:
-  #NX_CLOUD_DISTRIBUTED_EXECUTION: true
-  #NX_CLOUD_ACCESS_TOKEN: '${{ secrets.NX_CLOUD_ACCESS_TOKEN }}'
-  #NX_BRANCH: '${{github.event.pull_request.number || github.ref_name}}'
+#NX_CLOUD_DISTRIBUTED_EXECUTION: true
+#NX_CLOUD_ACCESS_TOKEN: '${{ secrets.NX_CLOUD_ACCESS_TOKEN }}'
+#NX_BRANCH: '${{github.event.pull_request.number || github.ref_name}}'
 
 jobs:
-
   main:
     runs-on: ubuntu-latest
     if: ${{ github.event_name != 'pull_request' }}
@@ -28,12 +27,12 @@ jobs:
       #  uses: nrwl/nx-set-shas@v3
       - uses: actions/setup-node@v4
         with:
-          node-version: '16'
-      - uses: pnpm/action-setup@v2.4.0
+          node-version: "22"
+      - uses: pnpm/action-setup@v4.0.0
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 8
+          version: 9
           run_install: false
       - name: Get pnpm version
         id: pnpm-version
@@ -55,7 +54,7 @@ jobs:
       - run: pnpm install --no-frozen-lockfile
       #- run: npx nx-cloud start-ci-run
       #- run: pnpm run prettify:ci:readme
-      - run: npx lerna run build:ci #--concurrency 3
+      - run: pnpm run build:ci
       #- run: npx nx-cloud stop-all-agents
   pr:
     runs-on: ubuntu-latest
@@ -70,12 +69,12 @@ jobs:
       #  uses: nrwl/nx-set-shas@v3
       - uses: actions/setup-node@v4
         with:
-          node-version: '16'
-      - uses: pnpm/action-setup@v2.4.0
+          node-version: "22"
+      - uses: pnpm/action-setup@v4.0.0
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 8
+          version: 9
           run_install: false
       - name: Get pnpm version
         id: pnpm-version
@@ -97,11 +96,10 @@ jobs:
       - run: pnpm install --no-frozen-lockfile
       #- run: npx nx-cloud start-ci-run
       #- run: pnpm run prettify:ci:readme
-      - run: npx lerna run build:ci #--concurrency 3
+      - run: pnpm run build:ci
       #- run: npx nx-cloud stop-all-agents
       - run: echo ${{ github.repository_owner }}
       - run: echo ${{ github.actor }}
-
 #  agents:
 #    runs-on: ubuntu-latest
 #    name: Nx Agent
@@ -113,12 +111,12 @@ jobs:
 #      - uses: actions/checkout@v3
 #      - uses: actions/setup-node@v3
 #        with:
-#          node-version: '16'
-#      - uses: pnpm/action-setup@v2.2.2
+#          node-version: '22'
+#      - uses: pnpm/action-setup@v4.0.0
 #        name: Install pnpm
 #        id: pnpm-install
 #        with:
-#          version: 8
+#          version: 9
 #          run_install: false
 #      - name: Get pnpm version
 #        id: pnpm-version

@@ -1,7 +1,7 @@
 {
   "name": "editor-demo",
   "private": true,
-  "version": "2.12.0",
+  "version": "3.1.0",
   "description": "> TODO: description",
   "author": "Matteo Bruni <matteo.bruni@me.com>",
   "homepage": "https://particles.js.org",
@@ -19,15 +19,16 @@
     "url": "https://github.com/tsparticles/editor/issues"
   },
   "devDependencies": {
+    "@tsparticles/configs": "^3.7.1",
+    "@tsparticles/editor": "workspace:^",
+    "@tsparticles/engine": "^3.7.1",
+    "@tsparticles/plugin-export-json": "^3.7.1",
     "express": "^4.18.2",
-    "express-rate-limit": "^7.0.0",
-    "helmet": "^7.0.0",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
     "object-gui": "^2.0.2",
     "pug": "^3.0.2",
     "stylus": "^0.62.0",
-    "tsparticles": "^2.12.0",
-    "tsparticles-editor": "workspace:^",
-    "tsparticles-engine": "^2.12.0",
-    "tsparticles-plugin-export-json": "^2.12.0"
+    "tsparticles": "^3.7.1"
   }
 }

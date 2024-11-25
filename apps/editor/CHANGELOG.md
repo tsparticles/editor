@@ -3,37 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/tsparticles/editor/compare/v3.0.0...v3.1.0) (2024-11-25)
+
+### Bug Fixes
+
+- fixed issue with newer tsParticles versions ([fd97209](https://github.com/tsparticles/editor/commit/fd97209339afb6a14c0aa30b47605cf94ec4d461))
+
+# [3.0.0](https://github.com/tsparticles/editor/compare/v2.12.0...v3.0.0) (2023-12-05)
+
+### Features
+
+- preparing migration to v3 ([2a5f8ad](https://github.com/tsparticles/editor/commit/2a5f8ad6c1c73054564313d7ebef613b91662c09))
+
 # [2.12.0](https://github.com/tsparticles/editor/compare/v2.11.0...v2.12.0) (2023-08-04)
 
 **Note:** Version bump only for package editor-demo
-
-
-
-
 
 # [2.11.0](https://github.com/tsparticles/editor/compare/v2.10.1...v2.11.0) (2023-07-13)
 
 **Note:** Version bump only for package editor-demo
 
-
-
-
-
 ## [2.10.1](https://github.com/tsparticles/editor/compare/v2.10.0...v2.10.1) (2023-06-04)
 
 **Note:** Version bump only for package editor-demo
 
-
-
-
-
 # 2.10.0 (2023-06-03)
 
 **Note:** Version bump only for package editor-demo
-
-
-
-
 
 ## [2.9.3](https://github.com/matteobruni/tsparticles/compare/editor-demo@2.9.2...editor-demo@2.9.3) (2023-02-12)
 
@@ -115,11 +111,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   fixed editor ([d78892e](https://github.com/matteobruni/tsparticles/commit/d78892ea1af4ad47f677af0bbbae2272eea5e5b4))
+- fixed editor ([d78892e](https://github.com/matteobruni/tsparticles/commit/d78892ea1af4ad47f677af0bbbae2272eea5e5b4))
 
 ### Features
 
--   updating editor to Object GUI v2 ([12ea540](https://github.com/matteobruni/tsparticles/commit/12ea540a040aae301401e3941c0cd1ca18f4ed3e))
+- updating editor to Object GUI v2 ([12ea540](https://github.com/matteobruni/tsparticles/commit/12ea540a040aae301401e3941c0cd1ca18f4ed3e))
 
 ## [2.2.4](https://github.com/matteobruni/tsparticles/compare/editor-demo@2.2.2...editor-demo@2.2.4) (2022-08-26)
 
@@ -165,7 +161,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   fixes build scripts, closes [#3909](https://github.com/matteobruni/tsparticles/issues/3909), closes [#3911](https://github.com/matteobruni/tsparticles/issues/3911) ([d2c3fb3](https://github.com/matteobruni/tsparticles/commit/d2c3fb33ff9c9d529f2609f89c63cb6e1e61ecda))
+- fixes build scripts, closes [#3909](https://github.com/matteobruni/tsparticles/issues/3909), closes [#3911](https://github.com/matteobruni/tsparticles/issues/3911) ([d2c3fb3](https://github.com/matteobruni/tsparticles/commit/d2c3fb33ff9c9d529f2609f89c63cb6e1e61ecda))
 
 ## [2.0.5](https://github.com/matteobruni/tsparticles/compare/editor-demo@2.0.4...editor-demo@2.0.5) (2022-04-14)
 
@@ -175,19 +171,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+- splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
 
 ## [2.0.3](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.27.1...editor-demo@2.0.3) (2022-03-11)
 
 ### Features
 
--   splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+- splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
 
 ## [2.0.2](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.26.4...editor-demo@2.0.2) (2022-02-21)
 
 ### Features
 
--   splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+- splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
 
 ## [1.28.1](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.28.0...editor-demo@1.28.1) (2022-04-06)
 
@@ -225,7 +221,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   fixed emitters issues ([c9d9a51](https://github.com/matteobruni/tsparticles/commit/c9d9a51e41fdc77a9bf544a09d979d8c2f6b10d5))
+- fixed emitters issues ([c9d9a51](https://github.com/matteobruni/tsparticles/commit/c9d9a51e41fdc77a9bf544a09d979d8c2f6b10d5))
 
 ## [2.0.1](https://github.com/matteobruni/tsparticles/compare/editor-demo@2.0.0...editor-demo@2.0.1) (2022-02-15)
 
@@ -245,7 +241,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+- splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
 
 # [2.0.0-beta.5](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.24.2...editor-demo@2.0.0-beta.5) (2022-01-30)
 
@@ -273,8 +269,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
--   updated fpsLimit default value to 120 build: updated all presets to have a fpsLimit of 120 ([d1eff05](https://github.com/matteobruni/tsparticles/commit/d1eff050224c4d65727c0abc3f100d70d3807eb8))
+- splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+- updated fpsLimit default value to 120 build: updated all presets to have a fpsLimit of 120 ([d1eff05](https://github.com/matteobruni/tsparticles/commit/d1eff050224c4d65727c0abc3f100d70d3807eb8))
 
 # [2.0.0-beta.4](https://github.com/matteobruni/tsparticles/compare/editor-demo@2.0.0-beta.3...editor-demo@2.0.0-beta.4) (2021-12-07)
 
@@ -282,7 +278,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   fixed editor issues ([ff3fdd3](https://github.com/matteobruni/tsparticles/commit/ff3fdd318f2c503b1e201afaa0b77e4337c2fd81))
+- fixed editor issues ([ff3fdd3](https://github.com/matteobruni/tsparticles/commit/ff3fdd318f2c503b1e201afaa0b77e4337c2fd81))
 
 ## [1.24.1](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.24.0...editor-demo@1.24.1) (2022-01-26)
 
@@ -304,13 +300,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+- splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
 
 # [2.0.0-beta.2](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.20.4...editor-demo@2.0.0-beta.2) (2021-10-06)
 
 ### Features
 
--   splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+- splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
 
 # [2.0.0-beta.1](https://github.com/matteobruni/tsparticles/compare/editor-demo@2.0.0-beta.0...editor-demo@2.0.0-beta.1) (2021-10-06)
 
@@ -350,7 +346,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
+- splitting engine from slim and full bundles (v2) ([268b78c](https://github.com/matteobruni/tsparticles/commit/268b78c12d6c54069893d27643cfe7a30f3be777))
 
 ## [1.20.3](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.20.2...editor-demo@1.20.3) (2021-10-03)
 
@@ -376,7 +372,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **deps:** pin dependencies ([23be870](https://github.com/matteobruni/tsparticles/commit/23be8708d698e1e37a18f2ed292cbccffb0f1e47))
+- **deps:** pin dependencies ([23be870](https://github.com/matteobruni/tsparticles/commit/23be8708d698e1e37a18f2ed292cbccffb0f1e47))
 
 ## [1.18.3](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.18.2...editor-demo@1.18.3) (2021-08-10)
 
@@ -430,35 +426,35 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   fixed life duration/delay sync options ([2db867c](https://github.com/matteobruni/tsparticles/commit/2db867cf52c9f26c431a6d88fabace0ca3f9b200))
--   fixed links broken with a previous commit, updated object-gui ([24b2872](https://github.com/matteobruni/tsparticles/commit/24b2872ef736efd5e03b529a94e3f695c4504e86))
+- fixed life duration/delay sync options ([2db867c](https://github.com/matteobruni/tsparticles/commit/2db867cf52c9f26c431a6d88fabace0ca3f9b200))
+- fixed links broken with a previous commit, updated object-gui ([24b2872](https://github.com/matteobruni/tsparticles/commit/24b2872ef736efd5e03b529a94e3f695c4504e86))
 
 # [1.0.0-beta.10](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.0.0-alpha.38.0...editor-demo@1.0.0-beta.10) (2020-10-02)
 
 ### Bug Fixes
 
--   fixed life duration/delay sync options ([2db867c](https://github.com/matteobruni/tsparticles/commit/2db867cf52c9f26c431a6d88fabace0ca3f9b200))
--   fixed links broken with a previous commit, updated object-gui ([24b2872](https://github.com/matteobruni/tsparticles/commit/24b2872ef736efd5e03b529a94e3f695c4504e86))
+- fixed life duration/delay sync options ([2db867c](https://github.com/matteobruni/tsparticles/commit/2db867cf52c9f26c431a6d88fabace0ca3f9b200))
+- fixed links broken with a previous commit, updated object-gui ([24b2872](https://github.com/matteobruni/tsparticles/commit/24b2872ef736efd5e03b529a94e3f695c4504e86))
 
 # [1.0.0-beta.8](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.0.0-alpha.38.0...editor-demo@1.0.0-beta.8) (2020-10-02)
 
 ### Bug Fixes
 
--   fixed life duration/delay sync options ([2db867c](https://github.com/matteobruni/tsparticles/commit/2db867cf52c9f26c431a6d88fabace0ca3f9b200))
--   fixed links broken with a previous commit, updated object-gui ([24b2872](https://github.com/matteobruni/tsparticles/commit/24b2872ef736efd5e03b529a94e3f695c4504e86))
+- fixed life duration/delay sync options ([2db867c](https://github.com/matteobruni/tsparticles/commit/2db867cf52c9f26c431a6d88fabace0ca3f9b200))
+- fixed links broken with a previous commit, updated object-gui ([24b2872](https://github.com/matteobruni/tsparticles/commit/24b2872ef736efd5e03b529a94e3f695c4504e86))
 
 # [1.0.0-beta.0](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.0.0-alpha.38.0...editor-demo@1.0.0-beta.0) (2020-10-02)
 
 ### Bug Fixes
 
--   fixed life duration/delay sync options ([2db867c](https://github.com/matteobruni/tsparticles/commit/2db867cf52c9f26c431a6d88fabace0ca3f9b200))
--   fixed links broken with a previous commit, updated object-gui ([24b2872](https://github.com/matteobruni/tsparticles/commit/24b2872ef736efd5e03b529a94e3f695c4504e86))
+- fixed life duration/delay sync options ([2db867c](https://github.com/matteobruni/tsparticles/commit/2db867cf52c9f26c431a6d88fabace0ca3f9b200))
+- fixed links broken with a previous commit, updated object-gui ([24b2872](https://github.com/matteobruni/tsparticles/commit/24b2872ef736efd5e03b529a94e3f695c4504e86))
 
 # [1.0.0-alpha.56](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.0.0-1.0.0-alpha.38.2...editor-demo@1.0.0-alpha.56) (2020-08-22)
 
 ### Bug Fixes
 
--   fixed links broken with a previous commit, updated object-gui ([24b2872](https://github.com/matteobruni/tsparticles/commit/24b2872ef736efd5e03b529a94e3f695c4504e86))
+- fixed links broken with a previous commit, updated object-gui ([24b2872](https://github.com/matteobruni/tsparticles/commit/24b2872ef736efd5e03b529a94e3f695c4504e86))
 
 # [1.0.0-alpha.55](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.0.0-alpha.54...editor-demo@1.0.0-alpha.55) (2020-08-17)
 
@@ -468,7 +464,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   fixed links broken with a previous commit, updated object-gui ([24b2872](https://github.com/matteobruni/tsparticles/commit/24b2872ef736efd5e03b529a94e3f695c4504e86))
+- fixed links broken with a previous commit, updated object-gui ([24b2872](https://github.com/matteobruni/tsparticles/commit/24b2872ef736efd5e03b529a94e3f695c4504e86))
 
 # [1.0.0-alpha.53](https://github.com/matteobruni/tsparticles/compare/editor-demo@1.0.0-alpha.52...editor-demo@1.0.0-alpha.53) (2020-08-13)
 

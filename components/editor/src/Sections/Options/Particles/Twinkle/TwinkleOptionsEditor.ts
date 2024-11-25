@@ -1,12 +1,12 @@
-import type { Container } from "tsparticles-engine";
+import { type EditorGroup, EditorType } from "object-gui";
+import type { Container } from "@tsparticles/engine";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class TwinkleOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => unknown;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -29,7 +29,7 @@ export class TwinkleOptionsEditor extends EditorBase {
         const options = optionsFunc();
         const color = typeof options.color === "string" ? options.color : options.color?.value;
 
-        group.addProperty("color", "Color", EditorType.color, color, false).change(async (value: unknown) => {
+        group.addProperty("color", "Color", EditorType.color, color, false).change((value: unknown) => {
             const options = optionsFunc();
 
             if (typeof value === "string") {
@@ -42,21 +42,21 @@ export class TwinkleOptionsEditor extends EditorBase {
                 }
             }
 
-            await this.particles().refresh();
+            void this.particles().refresh();
         });
 
-        group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        group.addProperty("frequency", "Frequency", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("frequency", "Frequency", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
 
         group
             .addProperty("opacity", "Opacity", EditorType.number)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .step(0.01)
             .min(0)

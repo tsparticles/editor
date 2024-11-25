@@ -1,12 +1,12 @@
-import type { Container, IAnimatableColor } from "tsparticles-engine";
+import type { Container, IAnimatableColor } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 
 export class ColorOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => IAnimatableColor;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -22,22 +22,22 @@ export class ColorOptionsEditor extends EditorBase {
     private addAnimation(): void {
         const group = this.group.addGroup("animation", "Animation");
 
-        group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
-        group.addProperty("speed", "Speed", EditorType.number).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("speed", "Speed", EditorType.number).change(() => {
+            void this.particles().refresh();
         });
 
-        group.addProperty("sync", "Sync", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        group.addProperty("sync", "Sync", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
     }
 
     private addProperties(): void {
-        this.group.addProperty("value", "Value", EditorType.color).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("value", "Value", EditorType.color).change(() => {
+            void this.particles().refresh();
         });
     }
 }

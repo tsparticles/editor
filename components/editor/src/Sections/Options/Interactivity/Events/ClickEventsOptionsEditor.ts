@@ -1,14 +1,14 @@
-import { ClickMode, type Container, type IClickEvent } from "tsparticles-engine";
+import { type Container, type IClickEvent } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
-import { loadAbsorbersPlugin } from "tsparticles-plugin-absorbers";
-import { loadEmittersPlugin } from "tsparticles-plugin-emitters";
+import { loadAbsorbersPlugin } from "@tsparticles/plugin-absorbers";
+import { loadEmittersPlugin } from "@tsparticles/plugin-emitters";
 
 export class ClickEventsOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => IClickEvent;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -21,36 +21,36 @@ export class ClickEventsOptionsEditor extends EditorBase {
     }
 
     private addProperties(): void {
-        this.group.addProperty("enable", "Enable", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("enable", "Enable", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
 
         const modeSelectInput = this.group
             .addProperty("mode", "Mode", EditorType.select)
-            .change(async () => {
-                await this.particles().refresh();
+            .change(() => {
+                void this.particles().refresh();
             })
             .addItems([
                 {
-                    value: ClickMode.attract,
+                    value: "attract",
                 },
                 {
-                    value: ClickMode.bubble,
+                    value: "bubble",
                 },
                 {
-                    value: ClickMode.pause,
+                    value: "pause",
                 },
                 {
-                    value: ClickMode.push,
+                    value: "push",
                 },
                 {
-                    value: ClickMode.remove,
+                    value: "remove",
                 },
                 {
-                    value: ClickMode.repulse,
+                    value: "repulse",
                 },
                 {
-                    value: ClickMode.trail,
+                    value: "trail",
                 },
             ]);
 

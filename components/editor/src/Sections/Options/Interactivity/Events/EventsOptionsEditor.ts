@@ -1,15 +1,15 @@
-import type { Container, IEvents } from "tsparticles-engine";
+import type { Container, IEvents } from "@tsparticles/engine";
+import { type EditorGroup, EditorType } from "object-gui";
 import { ClickEventsOptionsEditor } from "./ClickEventsOptionsEditor";
 import { DivsEventsOptionsEditor } from "./DivsEventsOptionsEditor";
 import { EditorBase } from "../../../../EditorBase";
-import type { EditorGroup } from "object-gui";
-import { EditorType } from "object-gui";
 import { HoverEventsOptionsEditor } from "./HoverEventsOptionsEditor";
 
 export class EventsOptionsEditor extends EditorBase {
     group!: EditorGroup;
     private options!: () => IEvents;
 
+    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
     constructor(particles: () => Container) {
         super(particles);
     }
@@ -43,8 +43,8 @@ export class EventsOptionsEditor extends EditorBase {
     }
 
     private addProperties(): void {
-        this.group.addProperty("resize", "Resize", EditorType.boolean).change(async () => {
-            await this.particles().refresh();
+        this.group.addProperty("resize", "Resize", EditorType.boolean).change(() => {
+            void this.particles().refresh();
         });
     }
 }
