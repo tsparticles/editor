@@ -1,4 +1,9 @@
-import type { Container, IBackgroundMask, IBackgroundMaskCover, IColor } from "@tsparticles/engine";
+import {
+    type Container,
+    type IBackgroundMask,
+    type IBackgroundMaskCover,
+    type IRangeValueColor,
+} from "@tsparticles/engine";
 import { EditorBase } from "../../../EditorBase";
 import type { EditorGroup } from "object-gui";
 import { EditorType } from "object-gui";
@@ -20,19 +25,24 @@ export class BackgroundMaskOptionsEditor extends EditorBase {
     }
 
     private addCover(): void {
-        const options = this.options().cover as IBackgroundMaskCover;
-        const coverColor = options.color as IColor;
-        const coverGroup = this.group.addGroup("cover", "Cover");
+        const coverGroup = this.group.addGroup("cover", "Cover"),
+            options = coverGroup.data as () => IBackgroundMaskCover,
+            colorValue = options().color,
+            color = typeof colorValue === "string" ? colorValue : colorValue?.value;
 
-        coverGroup
-            .addProperty("color", "Color", EditorType.color, coverColor.value, false)
-            .change(async (value: unknown) => {
-                if (typeof value === "string") {
-                    coverColor.value = value;
-                }
+        coverGroup.addProperty("color", "Color", EditorType.color, color, false).change(async (value: unknown) => {
+            if (typeof value === "string") {
+                options().color = value;
+            } else {
+                options().color = { value: value as IRangeValueColor };
+            }
 
-                await this.particles().refresh();
-            });
+            await this.particles().refresh();
+        });
+
+        coverGroup.addProperty("image", "Image", EditorType.string).change(async () => {
+            await this.particles().refresh();
+        });
 
         coverGroup
             .addProperty("opacity", "Opacity", EditorType.number)

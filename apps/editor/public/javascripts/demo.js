@@ -1,4 +1,5 @@
 (async () => {
+  await loadFull(tsParticles);
   await loadExportJSONPlugin(tsParticles);
 
   const container = await tsParticles.load({
