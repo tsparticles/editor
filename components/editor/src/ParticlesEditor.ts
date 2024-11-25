@@ -130,7 +130,7 @@ export class ParticlesEditor extends Editor {
                 } catch {
                     // ignore
                 }
-            });
+            })();
         });
     }
 }
