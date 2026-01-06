@@ -50,7 +50,7 @@ export class ParticlesEditor extends Editor {
 
                 const contentType = "application/json",
                     url = URL.createObjectURL(blob),
-                    a = document.createElement("a");
+                    a = globalThis.document.createElement("a");
 
                 a.download = "particles.json";
                 a.href = url;
